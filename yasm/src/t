@@ -1,0 +1,10 @@
+OS != uname -s
+
+ifeq ($(OS),Darwin)
+   PROGS = exit_osx
+   OBJFMT = macho64
+else
+   PROGS = exit
+   OBJFMT = elf64
+endif
+
